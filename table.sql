@@ -64,7 +64,7 @@ CREATE TABLE Produção (
     FOREIGN KEY (ID) REFERENCES Filme(ID)
 );
 
-CREATE TABLE Ator (
+CREATE TABLE Atores (
     ID INT,
     ator VARCHAR(100),
     PRIMARY KEY (ID, ator),
