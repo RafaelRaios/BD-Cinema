@@ -108,3 +108,29 @@ CREATE TABLE Responsavel (
     FOREIGN KEY (ID) REFERENCES Serviço(ID),
     FOREIGN KEY (CPF) REFERENCES Funcionario(CPF)
 );
+
+--ingressos vendidos por sessão
+SELECT sessao_id, COUNT(ID) AS total_ingressos FROM Ingresso GROUP BY sessao_id;
+
+--filmes mais assistidos por cinema
+SELECT f.Titulo, i.cinema_id, COUNT(i.ID) AS total_assistido FROM Ingresso i
+    JOIN Sessao s ON i.sessao_id = s.ID AND i.filme_id = s.filme_id
+    JOIN Filme f ON i.filme_id = f.ID
+    GROUP BY f.Titulo, i.cinema_id ORDER BY total_assistido DESC;
+
+--salas mais usadas nas sessões 'HAVING'
+SELECT sala_numero, cinema_id, COUNT(ID) AS total_sessoes FROM Sessao
+    GROUP BY sala_numero, cinema_id 
+    HAVING COUNT(ID) > 10;
+
+--Subconsulta Escalar
+SELECT Titulo, (SELECT COUNT(*) FROM Ingresso WHERE Ingresso.filme_id = Filme.ID) AS total_ingressos_vendidos FROM Filme;
+
+--nome e e-mail do funcionário admitido mais recentemente
+SELECT nome, email FROM Funcionario 
+    WHERE (CPF, data_admissao) = (SELECT CPF, MAX(data_admissao) FROM Funcionario);
+
+--sessões que ocorreram no último mês
+SELECT f.Titulo, g.genero FROM (SELECT filme_id, data_ FROM Sessao WHERE data_ >= DATEADD(MONTH, -1, GETDATE())) AS UltimasSessoes
+    JOIN Filme f ON UltimasSessoes.filme_id = f.ID
+    JOIN Gênero g ON f.ID = g.ID;
