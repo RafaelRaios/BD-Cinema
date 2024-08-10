@@ -34,7 +34,7 @@ INSERT INTO Endereco (CEP, rua, numero) VALUES ('89012345', 'Rua H', '800');
 INSERT INTO Endereco (CEP, rua, numero) VALUES ('90123456', 'Rua I', '900');
 INSERT INTO Endereco (CEP, rua, numero) VALUES ('01234567', 'Rua J', '1000');
 
--- Cinmemas
+-- Cinemas
 INSERT INTO Cinema (ID, nome, CEP) VALUES (1, 'Cinema Central', '12345678');
 INSERT INTO Cinema (ID, nome, CEP) VALUES (2, 'Cinema Paulista', '23456789');
 INSERT INTO Cinema (ID, nome, CEP) VALUES (3, 'Cinema Boulevard', '34567890');
@@ -319,10 +319,35 @@ INSERT INTO Sessao (ID, hora, data_, idioma, filme_id, sala_numero, cinema_id) V
 
 -- Ingressos
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (1, 'A1', '12345678901', 1, 1, 1, 1);
-INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (2, 'A2', '12345678901', 1, 1, 1, 1);
-INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (3, 'A3', '23456789012', 1, 1, 1, 1);
-INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A1', '12345678901', 1, 1, 1, 7);
-INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (5, 'A2', '12345678901', 1, 1, 1, 8);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (2, 'A2', '23456789012', 1, 1, 1, 1);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (3, 'A3', '34567890123', 1, 1, 1, 1);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A1', '45678901234', 1, 1, 1, 7);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (5, 'A2', '56789012345', 1, 1, 1, 8);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (6, 'A3', '67890123456', 2, 2, 2, 7);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (7, 'A1', '78901234567', 3, 3, 3, 6);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (8, 'A2', '89012345678', 1, 1, 1, 5);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (9, 'A3', '90123456789', 2, 2, 2, 4);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (10, 'A1', '01234567890', 3, 3, 3, 3);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (1, 'A2', '12345678911', 1, 1, 1, 2);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (2, 'A3', '23456789021', 2, 2, 2, 1);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (3, 'A1', '34567890131', 3, 3, 3, 0);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A2', '45678901241', 1, 1, 1, 9);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (5, 'A3', '56789012351', 2, 2, 2, 8);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (6, 'A1', '67890123461', 3, 3, 3, 7);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (7, 'A2', '78901234571', 1, 1, 1, 6);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (8, 'A3', '89012345681', 2, 2, 2, 5);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (9, 'A1', '90123456791', 3, 3, 3, 4);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (10, 'A2', '01234567801', 1, 1, 1, 3);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (1, 'A3', '12345678921', 2, 2, 2, 2);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (2, 'A1', '23456789022', 3, 3, 3, 1);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (3, 'A2', '34567890132', 1, 1, 1, 0);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A3', '45678901242', 2, 2, 2, 9);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (5, 'A1', '56789012352', 3, 3, 3, 8);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (6, 'A2', '67890123462', 1, 1, 1, 7);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (7, 'A3', '78901234572', 2, 2, 2, 6);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (8, 'A1', '89012345682', 3, 3, 3, 5);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (9, 'A2', '90123456792', 1, 1, 1, 4);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (10, 'A3', '01234567802', 2, 2, 2, 3);
 
 --Responsavel
 INSERT INTO Responsavel (Numero, Cinema, ID, CPF, data_, turno) VALUES (1, 1, 1, '67890123456', TO_DATE('2024-08-01', 'YYYY-MM-DD'), 'Manhã');
