@@ -345,7 +345,7 @@ INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A1', '99614341238', 1, 1, 1, 1);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (5, 'E11', '89012345678', 8, 9, 2, 7);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (6, 'B12', '70902434438', 10, 7, 2, 8);
-INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (8, 'A1', '13240242451', 1, 1, 1, 1);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (8, 'A9', '13240242451', 1, 1, 1, 1);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (7, 'F3', '13230942450', 2, 7, 2, 4);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (9, 'H14', '13230942450', 4, 9, 2, 5);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (10, 'F1', '13230942450', 6, 7, 2, 6);
