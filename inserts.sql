@@ -342,7 +342,7 @@ INSERT INTO Responsavel (Numero, Cinema, ID, CPF, data_, turno) VALUES (4, 4, 4,
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (1, 'A1', '12345678901', 1, 1, 1, 1);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (2, 'A2', '12345678901', 1, 1, 1, 1);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (3, 'A3', '23456789012', 1, 1, 1, 1);
-INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A1', '99614341238', 1, 1, 1, 1);
+INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (4, 'A4', '99614341238', 1, 1, 1, 1);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (5, 'E11', '89012345678', 8, 9, 2, 7);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (6, 'B12', '70902434438', 10, 7, 2, 8);
 INSERT INTO Ingresso (ID, Assento, cliente_cpf, sessao_id, filme_id, sala_numero, cinema_id) VALUES (8, 'A9', '13240242451', 1, 1, 1, 1);
