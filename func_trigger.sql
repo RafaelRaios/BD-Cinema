@@ -15,6 +15,7 @@ BEGIN
 
     RETURN qtd_sessoes;
 END;
+/
 
 --trigger para deletar um
 CREATE OR REPLACE TRIGGER excluir_ingressos_apos_excluir_sessao
@@ -51,37 +52,37 @@ BEGIN
 END;
 /
 
---trigger
---Quantidade de ingressos compatível com a sesão
-Delimiter // 
-
-CREATE TRIGGER verificar_capacida_sala
+--trigger para verificar a capacidade da sala
+CREATE OR REPLACE TRIGGER verificar_capacidade_sala
 AFTER INSERT ON Ingresso
 FOR EACH ROW
+DECLARE
+    assentos_ocupados INT;
+    capacidade_sala INT;
 BEGIN
-    DECLARE assentos_ocupados INT;
-    DECLARE capacidade_sala INT;
-
     -- Conta quantos ingressos já foram vendidos para a sessão atual
-    SELECT COUNT(*) INTO assentos_ocupados
+    SELECT COUNT(*)
+    INTO assentos_ocupados
     FROM Ingresso
-    WHERE sessao_id = NEW.sessao_id
-    AND filme_id = NEW.filme_id
-    AND sala_numero = NEW.sala_numero
-    AND cinema_id = NEW.cinema_id;
+    WHERE sessao_id = :NEW.sessao_id
+      AND filme_id = :NEW.filme_id
+      AND sala_numero = :NEW.sala_numero
+      AND cinema_id = :NEW.cinema_id;
 
     -- Obtém a capacidade total da sala
-    SELECT numero_assentos INTO capacidade_sala
+    SELECT numero_assentos
+    INTO capacidade_sala
     FROM Sala
-    WHERE Numero = NEW.sala_numero
-    AND cinema_id = NEW.cinema_id;
+    WHERE Numero = :NEW.sala_numero
+      AND cinema_id = :NEW.cinema_id;
 
     -- Verifica se a capacidade da sala foi excedida
     IF assentos_ocupados > capacidade_sala THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Capacidade da sala excedida!';
+        RAISE_APPLICATION_ERROR(-20001, 'Capacidade da sala excedida!');
     END IF;
-END //
-Delimiter;
+END;
+/
+
 
 --ver os filmes q aquela pessoa assitiu
 CREATE OR REPLACE FUNCTION filmes_assistidos_pelo_cliente(p_cliente_cpf CHAR)
